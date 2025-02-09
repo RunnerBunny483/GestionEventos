@@ -13,7 +13,7 @@ CREATE TABLE Eventos (
 -- Tabla de Compras
 CREATE TABLE Compras (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
-    dni VARCHAR(20) NOT NULL UNIQUE,
+    dni VARCHAR(20) NOT NULL,
     nombre VARCHAR(255) NOT NULL,
     apellidos VARCHAR(255) NOT NULL,
     fecha_compra DATE NOT NULL,
@@ -26,7 +26,9 @@ CREATE TABLE Compras (
 INSERT INTO Eventos (nombre, fecha_evento, entradas_disponibles, precio) VALUES
 ('Concierto Rock', '2025-06-15', 500, 50.00),
 ('Festival Jazz', '2025-07-20', 300, 35.00),
-('Teatro Clásico', '2025-08-10', 200, 25.00);
+('Teatro Clásico', '2025-08-10', 200, 25.00),
+('Resurrection Fest', '2025-06-22', 0, 100.00),
+('Cocacola Music Experience', '2025-01-01', 10, 50.00);
 
 -- Insertar compras
 INSERT INTO Compras (dni, nombre, apellidos, fecha_compra, numero_tarjeta, id_evento) VALUES
